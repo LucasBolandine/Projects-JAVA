@@ -21,7 +21,8 @@ public class Game extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         Snake snake = new Snake();
-        new  Scenario(primaryStage, snake);
+        Scenario scenario = new  Scenario(primaryStage, snake);
+        GameEvents gameEvents = new GameEvents(scenario, snake);
     }
 
 }
