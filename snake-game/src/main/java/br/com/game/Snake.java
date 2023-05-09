@@ -16,12 +16,16 @@ public class Snake {
 
     private void createSnake() {
         Random random = new Random();
-        Integer setInitX = random.nextInt(880) + 1;
-        Integer setInitY = random.nextInt(640) + 1;
+        Integer setInitX = random.nextInt(
+                (Configurations.WIDTH_SCENARIO/Configurations.SQUARE_SIZE) * Configurations.SQUARE_SIZE
+        );
+        Integer setInitY = random.nextInt(
+                (Configurations.WIDTH_SCENARIO/Configurations.SQUARE_SIZE) * Configurations.SQUARE_SIZE
+        );
 
-        this.headSnake = Utils.buildSquare(Color.BLACK);
-        this.headSnake.setTranslateX(Configurations.WIDTH_SCENARIO/ setInitX );
-        this.headSnake.setTranslateX(Configurations.HEIGTH_SCENARIO/setInitY );
+        this.headSnake = Utils.buildSquare(Color.web("#663366"));
+        this.headSnake.setTranslateX(setInitX);
+        this.headSnake.setTranslateX(setInitY);
     }
 
     public Canvas getHeadSnake() {
