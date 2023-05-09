@@ -25,7 +25,7 @@ public class Snake {
 
         this.headSnake = Utils.buildSquare(Color.web("#663366"));
         this.headSnake.setTranslateX(setInitX);
-        this.headSnake.setTranslateX(setInitY);
+        this.headSnake.setTranslateY(setInitY);
     }
 
     public Canvas getHeadSnake() {
